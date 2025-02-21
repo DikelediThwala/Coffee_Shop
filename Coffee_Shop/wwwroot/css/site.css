@@ -37,6 +37,12 @@ body {
     color: white;
     padding-top: 50px;
     height: 100vh;
+
+    /*display: flex;
+    justify-content: space-between;*/ /* Distribute the containers evenly */
+    /*align-items: center;*/
+/*    margin-top: 50px;
+*/    /*gap: 20px;*/
 }
     #Home .btn {
         color: white; /* Text color */
@@ -52,7 +58,7 @@ body {
         }
 /* Custom styling for the coffee icon */
 .coffee-icon {
-    font-size: 10px; /* Increase the size of the icon */
+    font-size: 15px; /* Increase the size of the icon */
     padding: 10px; /* Add space around the icon */
     border: 2px solid white; /* White border around the icon */
     border-radius: 50%; /* Make the border round (circle) */
@@ -61,6 +67,112 @@ body {
 }
 
     .coffee-icon:hover {
-        background-color: rgba(255, 255, 255, 0.5); /* Lighter background on hover */
+        background-color: #8B4513;
         transform: scale(1.1); /* Slightly increase the icon size on hover */
     }
+
+
+
+.container-card {
+    background-color: #8B4513; /* Default brown color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid white; /* White border */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    opacity: 0; /* Initially hidden */
+    text-align: center;
+    /*transform: translateX(0) translateY(-800px);*/ /* Move containers further up */
+    height: 130px; /* Fixed height */
+}
+
+
+/* Hover effect */
+.container-card:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    background-color: #6F3F2F; /* Darker brown on hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+/* Animations for each container */
+.container-left {
+    animation: slideInLeft 1s forwards; /* Left container animation */
+}
+
+.container-middle {
+    animation: slideInBottom 1s forwards; /* Bottom container animation */
+}
+
+.container-right {
+    animation: slideInRight 1s forwards; /* Right container animation */
+}
+
+/* Keyframe animations */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%); /* Start off-screen on the left */
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0); /* End at its original position */
+        opacity: 1;
+    }
+}
+
+@keyframes slideInBottom {
+    0% {
+        transform: translateY(100%); /* Start off-screen from the bottom */
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0); /* End at its original position */
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%); /* Start off-screen on the right */
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0); /* End at its original position */
+        opacity: 1;
+    }
+}
+
+ Adjusting delay for the animation 
+.container-left {
+    animation-delay: 0.3s;  Delay for the left container 
+}
+
+.container-middle {
+    animation-delay: 0.6s;  Delay for the middle container 
+}
+
+.container-right {
+    animation-delay: 0.9s;  Delay for the right container 
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col-12 {
+    flex: 1 1 100%;
+}
+
+.col-md-4 {
+    flex: 1 1 33%;  
+    display: flex;
+    justify-content: center;
+}
+
+.mb-4 {
+    margin-bottom: 20px;
+}

@@ -1,65 +1,114 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Serenity</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body>
 
-<div id="Home">
-    <div class="text-center">
-        <h1 class="display-4" style="color: white;">Café Serenity</h1>
-        <p></p>
-        <p style="color: white;">Where Every Sip Feels Like Home.</p>
+    <section id="Home">
+        <div class="text-center">
+            <h1 class="display-4">Café Serenity</h1>
+            <p>Where Every Sip Feels Like Home.</p>
+            <a href="#shop" class="btn btn-outline-white btn-lg mt-4">Shop</a>
+        </div>
 
-        <!-- Shop Button -->
-        <a href="#shop" class="btn btn-outline-white btn-lg mt-4">Shop</a>
-    </div>
-
-    <!-- Three animated containers aligned in a row (Bootstrap Grid) -->
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <!-- Coffee Container -->
-            <div class="col-12 col-md-4 mb-4">
-                <div class="container-card container-left">
-                    <h3 class="text-center" style="color: white;">Coffee</h3>
-                    <p class="text-center" style="color: white;">Enjoy our premium selection of coffee.</p>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="container-card coffee">
+                        <h3>Coffee</h3>
+                        <p>Enjoy our premium selection of coffee.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Dessert Container -->
-            <div class="col-12 col-md-4 mb-4">
-                <div class="container-card container-middle">
-                    <h3 class="text-center" style="color: white;">Dessert</h3>
-                    <p class="text-center" style="color: white;">Indulge in sweet treats with your coffee.</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="container-card dessert">
+                        <h3>Dessert</h3>
+                        <p>Indulge in sweet treats with your coffee.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Pastries Container -->
-            <div class="col-12 col-md-4 mb-4">
-                <div class="container-card container-right">
-                    <h3 class="text-center" style="color: white;">Pastries</h3>
-                    <p class="text-center" style="color: white;">Freshly baked pastries just for you.</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="container-card pastries">
+                        <h3>Pastries</h3>
+                        <p>Freshly baked pastries just for you.</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <br />
+    <hr/>
+    <div id="AboutUs" class="about-us-section">
+        <h2 style="color:black; text-align:left;">About Us</h2>
+        <div class="about-us-content">
+            <!-- Text on the left side -->
+            <div class="about-us-text">
+                <p style="color:black;;">
+                    Welcome to Café Serenity! We offer the best coffee, desserts, and pastries, crafted with love to bring you the perfect experience.
+                    Our team is dedicated to making every visit a delightful one. Whether you're looking for a place to relax, meet friends, or enjoy some quiet time,
+                    our café provides the perfect atmosphere. Our menu is designed to cater to all tastes, and we’re committed to providing the best service possible.
+                </p>
+                <p style="color:black;">
+                    At Café Serenity, every dish and drink is prepared with care and attention to detail. Our coffee is sourced from the finest beans,
+                    carefully selected to ensure every cup is rich and flavorful. Our desserts are freshly baked, offering a variety of sweet treats
+                    to complement your coffee. From mouth-watering cakes to delicious pastries, there's something for everyone to enjoy.
+                </p>
+              
+               
+            </div>
+
+            <!-- Image on the right side -->
+            <div class="about-us-image">
+				<img src="~/images/employees.jpg" />
+            </div>
+        </div>
     </div>
-</div>
+    <br />
+    <hr />
+
+    <section id="Reviews" class="reviews-section">
+        <p> </p>
+        <h2 style="color:black; text-align: left">Customer Reviews</h2>
+        <p style="color:black;">
+            <br />
+            <br />
+            Stay tuned for our customer reviews coming soon! We're excited to share feedback from those who have experienced Café Serenity firsthand.
+        </p>
+    </section>
+
+    <br />
+    <hr />
+
+    <section id="Location">
+        <h2 style="color: black; text-align:left;">Our Location</h2>
+        <p style="color: black;">Visit us at:</p>
+        <p style="color: black;">NMU SSV, Port Elizabeth, 6001, Eastern Cape</p>
+
+        <!-- Google Maps Embed -->
+        <iframe src="https://maps.app.goo.gl/nmmS3wBk3jWMhnt96"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+        </iframe>
+    </section>
 
 
-<div id="Shop">
-   
+    <br />
 
-</div>
+    <section id="ContactUs"></section>
 
-<div id="About Us">
+    <br />
+    <hr />
 
-
-</div>
-
-<div id="Reviews">
-
-</div>
-
-<div id="Contact Us">
-
-
-</div>
-
-
+</body>
+</html>

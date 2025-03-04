@@ -88,18 +88,27 @@
     <hr />
 
     <section id="Location">
-        <h2 style="color: black; text-align:left;">Our Location</h2>
-        <p style="color: black;">Visit us at:</p>
-        <p style="color: black;">NMU SSV, Port Elizabeth, 6001, Eastern Cape</p>
+        <div>
 
-        <!-- Google Maps Embed -->
-        <iframe src="https://maps.app.goo.gl/nmmS3wBk3jWMhnt96"
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-        </iframe>
+            <h2 style="color: black; display: flex; justify-content: center; background-color:#8B4513; text-align:left;">Our Location</h2>
+            <br />
+            <h4 style="color: black; display: flex; justify-content: center; ">Visit us at:</h4>
+            <h5 style="color: black; display: flex; justify-content: center; ">NMU SSV, Port Elizabeth, 6001, Eastern Cape</h5>
+            <br />
+            <div style="display: flex; justify-content: center; ">
+              
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.827552415317!2d25.662981209629994!3d-34.00358853905223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e6532cdeeb080c3%3A0x2fb2cb0acd52a26e!2sSanlam%20Student%20Village!5e0!3m2!1sen!2sza!4v1741100165784!5m2!1sen!2sza"
+                        width="900"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+       </div>
     </section>
 
 
@@ -110,5 +119,27 @@
     <br />
     <hr />
 
+
+ 
+    <button id="backToTop" onclick="scrollToTop()">▲</button>
+
+    <script>
+
+        window.onscroll = function() {
+            let button = document.getElementById("backToTop");
+            if (document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
 </body>
 </html>

@@ -229,24 +229,99 @@ footer {
 
 
 #backToTop {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #007bff; /* Blue color */
+    background-color: #007bff; 
     color: white;
     border: none;
-    border-radius: 50%; /* Circle shape */
+    border-radius: 50%;
     font-size: 24px;
     cursor: pointer;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Hover effect */
+
 #backToTop:hover {
-    background-color: #0056b3; /* Darker blue */
-    transform: scale(1.1); /* Slightly enlarge */
+    background-color: #0056b3; 
+    transform: scale(1.1); 
+}
+
+
+.shop-header {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 2px solid #ddd;
+}
+
+    .shop-header h1 {
+        font-size: 28px;
+        color: #333;
+    }
+
+.product-filter {
+    text-align: center;
+    margin: 20px;
+}
+
+    .product-filter select {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+
+/* Custom Styling for Review Cards */
+.review-card {
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+    .review-card:hover {
+        transform: translateY(-10px); /* Slight lift on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for hover effect */
+    }
+
+.card-title {
+    font-weight: bold;
+    color: #2c3e50; /* Dark blue/gray color for the title */
+}
+
+.card-text {
+    color: #34495e; /* Lighter gray for the review text */
+}
+
+.blockquote-footer {
+    font-size: 0.85rem;
+    color: #7f8c8d; /* Lighter color for the date */
+}
+
+/* Button Styling */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+    .btn-success:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+/* Adding some space between the cards */
+.row {
+    margin-top: 20px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 15px;
+    }
 }

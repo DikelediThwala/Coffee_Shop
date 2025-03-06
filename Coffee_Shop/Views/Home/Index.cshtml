@@ -16,7 +16,8 @@
         <div class="text-center">
             <h1 class="display-4">Café Serenity</h1>
             <p>Where Every Sip Feels Like Home.</p>
-            <a href="#shop" class="btn btn-outline-white btn-lg mt-4">Shop</a>
+            <a class="btn btn-outline-white btn-lg mt-4" asp-area="" asp-controller="Home" asp-action="Shop" style="font-size: 1.25rem;" >Shop</a>
+
         </div>
 
         <div class="container mt-5">
@@ -47,7 +48,7 @@
     <br />
     <hr/>
     <div id="AboutUs" class="about-us-section">
-        <h2 style="color:black; text-align:left;">About Us</h2>
+        <h2 style="color:black; text-align:left;background-color:#8B4513;">About Us</h2>
         <div class="about-us-content">
             <!-- Text on the left side -->
             <div class="about-us-text">
@@ -73,20 +74,6 @@
     </div>
     <br />
     <hr />
-
-    <section id="Reviews" class="reviews-section">
-     
-        <h2 style="color:black; text-align: left">Customer Reviews</h2>
-        <p style="color:black;">
-            <br />
-            <br />
-            Stay tuned for our customer reviews coming soon! We're excited to share feedback from those who have experienced Café Serenity firsthand.
-        </p>
-    </section>
-
-    <br />
-    <hr />
-
     <section id="Location">
         <div>
 
@@ -96,7 +83,7 @@
             <h5 style="color: black; display: flex; justify-content: center; ">NMU SSV, Port Elizabeth, 6001, Eastern Cape</h5>
             <br />
             <div style="display: flex; justify-content: center; ">
-              
+
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.827552415317!2d25.662981209629994!3d-34.00358853905223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e6532cdeeb080c3%3A0x2fb2cb0acd52a26e!2sSanlam%20Student%20Village!5e0!3m2!1sen!2sza!4v1741100165784!5m2!1sen!2sza"
                         width="900"
                         height="450"
@@ -108,11 +95,43 @@
 
             </div>
 
-       </div>
+        </div>
     </section>
 
 
     <br />
+    <section id="Reviews" class="reviews-section">
+        <h2 style="color:black; text-align: left;background-color:#8B4513;">Customer Reviews</h2>
+        <p style="color:black;">
+            <br />
+            <br />
+            Stay tuned for our customer reviews coming soon! We're excited to share feedback from those who have experienced Café Serenity firsthand.
+        </p>
+
+        <!-- Button to Add New Review -->
+        <a href="@Url.Action("Create", "Home")" class="btn btn-success mb-3">Add New Review</a>
+
+        <div class="row">
+            @foreach (var review in Model) // Assuming the model is passed as a list of BusinessReview
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card review-card shadow-lg">
+                        <div class="card-body">
+                            <h5 class="card-title">Rating: @review.Rating</h5>
+                            <p class="card-text">@review.ReviewText</p>
+                            <footer class="blockquote-footer">Reviewed on: @review.CreatedAt?.ToString("MMMM dd, yyyy")</footer>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+
+    <br />
+    <hr />
+
+   
 
     <section id="ContactUs"></section>
 

@@ -29,33 +29,44 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index" style="font-size: 1.25rem;">Home</a>
                         </li>
-                   
+
                         <li class="nav-item">
-                            <a class="nav-link text-white nav-link-hover" style="font-size: 1.25rem;" href="#AboutUs">About Us</a>
+                            <a class="nav-link text-white nav-link-hover" asp-controller="Home" asp-action="Index" asp-fragment="AboutUs" style="font-size: 1.25rem;">About Us</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy" style="font-size: 1.25rem;">Shop</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Shop" style="font-size: 1.25rem;">Shop</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy" style="font-size: 1.25rem;">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index" style="font-size: 1.25rem;">
                                 <i class="fas fa-coffee coffee-icon"></i>
                             </a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-white nav-link-hover" style="font-size: 1.25rem;" href="#Reviews">Reviews</a>
-                        </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link text-white nav-link-hover" style="font-size: 1.25rem;" href="#Location">Location</a>
+                            <a class="nav-link text-white nav-link-hover" asp-controller="Home" asp-action="Index" asp-fragment="Location" style="font-size: 1.25rem;">Location</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white nav-link-hover" asp-controller="Home" asp-action="Index" asp-fragment="Reviews" style="font-size: 1.25rem;">Reviews</a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy" style="font-size: 1.25rem;">Contact Us</a>
                         </li>
+
                     </ul>
                 </div>
 
+                <div class="d-flex ms-auto"me-2>
+                    <a href="#" class="btn btn-warning me-2">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                    </a>
+                    <div class="d-flex ms-auto">
+                        <a href="@Url.Action("Index", "Login")" class="btn btn-outline-light me-2">Login</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -68,7 +79,7 @@
     </div>
    
    <!-- Footer -->
-    <footer>
+    <footer style="text-align: center; background-color:royalblue;">
         <p>© 2024 Café Serenity | All rights reserved.</p>
     </footer>
   
